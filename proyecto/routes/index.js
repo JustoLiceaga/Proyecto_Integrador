@@ -6,5 +6,8 @@ router.get('/', indexController.index);
 
 router.get('/detalle/:detalle?', indexController.detalle);
 
+router.get('/register', indexController.register);
+
+router.get('/login', indexController.register);
 
 module.exports = router;
