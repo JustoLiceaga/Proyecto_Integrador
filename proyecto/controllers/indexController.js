@@ -15,6 +15,9 @@ const indexController = {
     editar: function(req, res) {
       res.render('product-add', { title: 'Express' });
     },
+    profile: function(req, res) {
+      res.render('profile', { title: 'Express' });
+    },
 
 }
 

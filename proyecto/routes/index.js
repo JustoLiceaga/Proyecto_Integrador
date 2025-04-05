@@ -12,5 +12,6 @@ router.get('/login', indexController.login);
 
 router.get('/editar', indexController.editar)
 
+router.get('/profile', indexController.profile)
 
 module.exports = router;
