@@ -10,4 +10,7 @@ router.get('/register', indexController.register);
 
 router.get('/login', indexController.login);
 
+router.get('/editar', indexController.editar)
+
+
 module.exports = router;

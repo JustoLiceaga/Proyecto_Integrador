@@ -12,6 +12,9 @@ const indexController = {
     login: function(req, res) {
       res.render('login', { title: 'Express' });
     },
+    editar: function(req, res) {
+      res.render('product-add', { title: 'Express' });
+    },
 
 }
 
