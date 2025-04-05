@@ -1,3 +1,5 @@
+const { search } = require("../routes");
+
 const indexController = {
     index: function(req, res) {
         res.render('index', { title: 'Express' });
@@ -18,7 +20,9 @@ const indexController = {
     profile: function(req, res) {
       res.render('profile', { title: 'Express' });
     },
-
+    search: function(req, res) {
+      res.render('search-results', { title: 'Express' });
+    },
 }
 
 
