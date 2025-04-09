@@ -7,7 +7,7 @@ const indexController = {
       },
 
     detalle: function(req, res) {
-      res.render('product', { title: 'Express' });
+      res.render('product', { usuario: data.usuario, producto: data.productos});
     },
     register: function(req, res) {
       res.render('register', { title: 'Express' });

@@ -86,9 +86,30 @@ const data = {
         nombre: "Buzo Oversize",
         descripcion: "Ideal para días fríos con estilo.",
         precio: 13999,
-        imagen: "",
+        imagen: "/images/products/buzoOversize.png",
         categoria: "Indumentaria",
-        comentarios: []
+        comentarios: [
+          {
+            usuario: "Martín",
+            texto: "Muy cómodas y buena calidad.",
+            imagenPerfil: "/images/users/chad.jpg"
+          },
+          {
+            usuario: "nasus",
+            texto: "Me llegaron en dos días, excelente servicio.",
+            imagenPerfil: "/images/users/chad2.jpg"
+          },
+          {
+            usuario: "Agus",
+            texto: "El buzo es enorme y abrigado, justo lo que buscaba.",
+            imagenPerfil: "/images/users/chad3.jpg"
+          },
+          {
+            usuario: "Laura",
+            texto: "Me encantó el color, aunque el talle viene un poco grande.",
+            imagenPerfil: "/images/users/chad4.jpg"
+          },
+        ]
       },
       {
         id: 8,
