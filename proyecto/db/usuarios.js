@@ -1,12 +1,12 @@
 const data = {
     usuario: {
       id: 1,
-      nombre: "genji",
+      nombre: "Genji",
       email: "genji@email.com",
       contraseña: "genji123", 
-      direccion: "Villa Cava 742",
+      direccion: "Villa 742",
       telefono: "+54 9 11 2345 6789",
-      imagenPerfil: ""
+      imagenPerfil: "/images/users/fotoPerfil.jpg"
     },
   
     productos: [
@@ -119,3 +119,5 @@ const data = {
       }
     ]
   };
+
+  module.exports = data

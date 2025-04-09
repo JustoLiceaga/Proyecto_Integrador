@@ -1,4 +1,5 @@
 const { search } = require("../routes");
+const data = require("../db/usuarios")
 
 const indexController = {
     index: function(req, res) {
@@ -15,10 +16,10 @@ const indexController = {
       res.render('login', { title: 'Express' });
     },
     editar: function(req, res) {
-      res.render('product-add', { title: 'Express' });
+      res.render('product-add', { usuario: data.usuario });
     },
     profile: function(req, res) {
-      res.render('profile', { title: 'Express' });
+      res.render('profile', { usuario: data.usuario });
     },
     search: function(req, res) {
       res.render('search-results', { title: 'Express' });
