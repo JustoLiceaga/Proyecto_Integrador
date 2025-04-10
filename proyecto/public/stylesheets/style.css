@@ -332,7 +332,9 @@ hr {
   flex-direction: column;
 }
 
-
+.main-footer{
+  border-radius: 20px;
+}
 /*====== Product Detail ======*/
 .product-detail {
   background-color: #ffffff;
