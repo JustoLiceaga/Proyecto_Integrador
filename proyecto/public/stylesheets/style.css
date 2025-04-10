@@ -26,6 +26,7 @@ h1,h2,h3,a {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  color: white;
 }
 
 /*====== Basics ======*/
@@ -90,7 +91,9 @@ hr {
   color: white;
 }
 
-
+.negro{
+  color: black;
+}
 
 .main-header_home-link,
 .main-header_credit-link {
@@ -159,6 +162,7 @@ hr {
   border: 0px;
   cursor: pointer;
   font-size: 1em;
+  color: white;
 }
 
 .logout:hover{
