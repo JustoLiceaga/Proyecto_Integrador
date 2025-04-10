@@ -322,6 +322,15 @@ hr {
   color: var(--gray);
   padding: 15px 0;
 }
+.col-12{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.cajaForm{
+  display: flex;
+  flex-direction: column;
+}
 
 
 /*====== Product Detail ======*/
