@@ -19,7 +19,7 @@ const indexController = {
       res.render('product-add', { usuario: data.usuario });
     },
     profile: function(req, res) {
-      res.render('profile', { usuario: data.usuario });
+      res.render('profile', { usuario: data.usuario, producto: data.productos });
     },
     search: function(req, res) {
       res.render('search-results', { title: 'Express' });
