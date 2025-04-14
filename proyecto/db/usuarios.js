@@ -1,9 +1,9 @@
 const data = {
     usuario: {
       id: 1,
-      nombre: "Genji",
-      email: "genji@email.com",
-      contraseña: "genji123", 
+      nombre: "Juan",
+      email: "juan@gmail.com",
+      contraseña: "1234", 
       direccion: "Villa 742",
       telefono: "+54 9 11 2345 6789",
       imagenPerfil: "/images/users/fotoPerfil.jpg"
