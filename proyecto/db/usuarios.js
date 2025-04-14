@@ -149,7 +149,7 @@ const data = {
         nombre: "Bufanda",
         descripcion: "Bufanda suave y calida para el frio.",
         precio: 15999,
-        imagen: "/images/products/prenda10.jpg",
+        imagen: "/images/products/prenda10.jpeg",
         categoria: "Indumentaria",
         comentarios: []
       }

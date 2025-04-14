@@ -30,6 +30,16 @@ h1,h2,h3,a {
 }
 
 /*====== Basics ======*/
+
+.nombresNuestros{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-size: larger;
+}
+
+
 * {
   box-sizing: border-box;
 }

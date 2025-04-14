@@ -6,7 +6,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">Nombre del producto</h2> 
 			<p class="product-detail-description">
-				<a href="/editar" class="color">Editar</a>
+				<a href="/product/editar" class="color">Editar</a>
 			</p>
 		</div>
 		<div class="product-detail">
@@ -22,7 +22,7 @@
 							<img src=" <%= producto[1].comentarios[0].imagenPerfil %>" alt="">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="/profile"><%= producto[1].comentarios[0].usuario %>: </a> </strong>
+								<strong> <a href="/users/profile"><%= producto[1].comentarios[0].usuario %>: </a> </strong>
 								<%= producto[1].comentarios[0].texto %></p>
 							</div>
 						</article>
@@ -30,7 +30,7 @@
 							<img src="<%= producto[1].comentarios[1].imagenPerfil %>" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="profile.html"><%= producto[1].comentarios[1].usuario %>: </a> </strong>
+									<strong> <a href="/users/profile"><%= producto[1].comentarios[1].usuario %>: </a> </strong>
 									<%= producto[1].comentarios[1].texto %></p>
 							</div>
 						</article>
@@ -38,7 +38,7 @@
 							<img src="<%= producto[1].comentarios[2].imagenPerfil %>" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="/profile"><%= producto[1].comentarios[2].usuario %>: </a> </strong>
+									<strong> <a href="/users/profile"><%= producto[1].comentarios[2].usuario %>: </a> </strong>
 									<%= producto[1].comentarios[2].texto %></p>
 							</div>
 						</article>
@@ -46,7 +46,7 @@
 							<img src="<%= producto[1].comentarios[3].imagenPerfil %>" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="/profile"><%= producto[1].comentarios[3].usuario %>: </a> </strong>
+									<strong> <a href="/users/profile"><%= producto[1].comentarios[3].usuario %>: </a> </strong>
 									<%= producto[1].comentarios[3].texto %></p>
 							</div>
 						</article>
@@ -54,13 +54,13 @@
 							<img src="<%= producto[1].comentarios[0].imagenPerfil %>" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="/profile"><%= producto[1].comentarios[0].usuario %>: </a> </strong>
+									<strong> <a href="/users/profile"><%= producto[1].comentarios[0].usuario %>: </a> </strong>
 									<%= producto[1].comentarios[0].texto %></p>
 							</div>
 						</article>
 
 					</section>
-					<form class="form" action="" method="POST">
+					<form class="form" action="/" method="get">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
@@ -70,4 +70,6 @@
 		</div>
 	</div>
 	<!-- /product detail -->
+	<%- include("./partials/footer") %>
+
 </body>
