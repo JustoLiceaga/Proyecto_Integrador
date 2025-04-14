@@ -1,4 +1,3 @@
-const { search } = require("../routes");
 const data = require("../db/usuarios")
 
 const indexController = {
