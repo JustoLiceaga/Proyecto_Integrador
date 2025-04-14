@@ -22,7 +22,7 @@ const indexController = {
       res.render('profile', { usuario: data.usuario, producto: data.productos });
     },
     search: function(req, res) {
-      res.render('search-results', { title: 'Express' });
+      res.render('search-results', {usuario: data.usuario, producto: data.productos} );
     },
 }
 

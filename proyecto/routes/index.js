@@ -14,7 +14,7 @@ router.get('/editar', indexController.editar)
 
 router.get('/profile', indexController.profile)
 
-router.get('/serch-results', indexController.search)
+router.get('/search-results', indexController.search)
 
 
 module.exports = router;
