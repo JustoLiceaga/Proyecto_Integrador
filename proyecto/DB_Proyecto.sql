@@ -6,6 +6,7 @@ USE catalogo_productos;
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(100) NOT NULL,
     email VARCHAR(255) NOT NULL,
     contrasenia VARCHAR(255) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
@@ -42,7 +43,7 @@ CREATE TABLE comentarios (
 );
 
 
-INSERT INTO usuarios (nombre_usuario, email, contrasenia, fecha_nacimiento) VALUES
+INSERT INTO usuarios (usuario, email, contrasenia, fecha_nacimiento) VALUES
 ('Juan', 'juan@gmail.com', '1234', '1990-01-01'),
 
 

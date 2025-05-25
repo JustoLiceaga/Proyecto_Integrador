@@ -1,4 +1,6 @@
-const data = require("../db/usuarios")
+let db = require("../database/models");
+let bcrypt = require ('bcryptjs');
+
 
 const indexController = {
     index: function(req, res) {

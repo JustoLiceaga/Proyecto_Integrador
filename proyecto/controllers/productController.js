@@ -1,4 +1,7 @@
-const data = require("../db/usuarios")
+let db = require("../database/models");
+let bcrypt = require ('bcryptjs');
+const user = db.Usuario
+
 
 const productController ={
     detalle: function(req, res) {
