@@ -1,7 +1,7 @@
 let db = require("../database/models");
 let bcrypt = require ('bcryptjs');
 const producto = db.Producto
-
+const usuario = db.Usuario;
 
 const productController ={
     detalle: function(req, res) {
@@ -16,7 +16,12 @@ const productController ={
         busqueda = req.query.search;
         producto.findAll({
             where: {
-                title: {[op.like]: '%' + busqueda + '%'} }
+                nombre: {[op.like]: '%' + busqueda + '%'} },
+                include: [{
+                model: usuario,
+                as: 'usuario',
+                attributes: ['usuario'] // Solo trae el nombre de usuario
+            }]
             })
             .then(function (producto) {
               if (!producto) {
