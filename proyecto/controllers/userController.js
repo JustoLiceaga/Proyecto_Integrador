@@ -7,9 +7,13 @@ let userController = {
 		res.render('register');
 	},
 
-	login: function(req, res) {
-		res.render('login');
-	},
+	login: function(req, res){
+        if(req.session.usuarioLogeado != undefined){
+            return res.redirect('/')
+        }else{
+        return res.render("login");
+        }
+        },
 
 	profile: function(req, res) {
 		res.render('profile', { usuario: data.usuario, producto: data.productos });
@@ -51,6 +55,41 @@ let userController = {
 			return res.send(error);
 		});
 	},
+
+	processLogin: function(req,res){
+
+        emails = req.body.email
+        password = req.body.password
+        recordame = req.body.tyc
+
+		user.findOne({
+			where: { email: emails }
+		})
+        .then(function(resultado){
+			if (!resultado) {
+            return res.send('El email no está registrado');
+        	}
+            if(bcrypt.compareSync(password, resultado.password) == true){
+                req.session.usuarioLogeado = resultado;
+                
+                if (recordame == 'on') {
+                    res.cookie('usuario', resultado.email, {maxAge: 1000 * 60 * 10})
+                }
+                res.redirect('/')
+            
+            } else{
+                res.send('la contrasenia es incorrecta')
+            }
+            })
+
+
+    },
+
+    logout: function(req,res){
+        req.session.destroy(()=>{
+        res.clearCookie('usuario');
+        res.redirect('/')})
+	}
 };
 
 module.exports = userController;
