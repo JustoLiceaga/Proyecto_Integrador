@@ -1,6 +1,6 @@
 let db = require("../database/models");
 let bcrypt = require ('bcryptjs');
-const user = db.Usuario
+const producto = db.Producto
 
 
 const productController ={
@@ -12,7 +12,21 @@ const productController ={
         res.render('product-add', { usuario: data.usuario });
       },
       search: function(req, res) {
-        res.render('search-results', {usuario: data.usuario, producto: data.productos} );
+
+        busqueda = req.query.search;
+        producto.findAll({
+            where: {
+                title: {[op.like]: '%' + busqueda + '%'} }
+            })
+            .then(function (producto) {
+              if (!producto) {
+                return res.send('No hay resultados para su criterio de búsqueda');
+              }else{
+                return res.render("search-results", {productos: producto})}
+            })
+            .catch(function(error){
+                return res.send(error);
+            })
       }
 }
 
