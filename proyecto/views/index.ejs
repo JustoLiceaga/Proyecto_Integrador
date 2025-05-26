@@ -20,14 +20,22 @@
 				<h2 class="products-title">Productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
+			<div class="col-12 col-sm-6 col-lg-3"></div>
 			<% producto.forEach(function(product) { %>
+				 
 				<a href="/product/detalle/<%= product.id %>">
-					<img src="<%= product.imagen %>" alt="foto de producto">
-					<h3 > <%= product.nombre %></h3>
-					<p> Cargado por: <%= product.usuario.email %></p>
+					<figure class="product-box_image">
+						<img src="<%= product.imagen %>" alt="foto de producto">
+					</figure>
+					<article class="product-box_data">
+						<h2 class="negro" > <%= product.nombre %></h2>
+						<p> Cargado por: <%= product.usuario.email %></p>
+					</article>
+					
 				</a>
-
+			
 			<% }) %> 
+			</div>
 				
 			
 		</div>
