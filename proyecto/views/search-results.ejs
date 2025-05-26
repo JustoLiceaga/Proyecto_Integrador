@@ -19,16 +19,16 @@
 			</div>
 			<div class="product-detail">
 				<div class="row">
-					<p>Resultados de búsqueda</p>
+					<h1 class="searchresultsh2">Resultados de búsqueda:</h1>
     
 					<ul>
 					  <% for (let i = 0; i < productos.length; i++) { %>
 						<li>
 							<img src="<%= productos[i].imagen %>" alt=""></img>
-						  <h2><a href="/producto/detalle/<%= productos[i].id %>">
+						  <h2 class="searchresultsh2"><a href="/producto/detalle/<%= productos[i].id %>">
 							<%= productos[i].nombre %>
 							</a></h2>
-							<p>Publicado por: <a href="/users/profile/<%= productos[i].usuario.id %>"><%= productos[i].usuario.email %></a></p>
+							<h2 class="searchresultsh2">Publicado por: <a href="/users/profile/<%= productos[i].usuario.id %>"><%= productos[i].usuario.email %></a></h2>
 						</li>
 				  <% } %>
 					  </ul>

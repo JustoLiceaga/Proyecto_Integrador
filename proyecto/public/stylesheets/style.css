@@ -31,6 +31,9 @@ h1,h2,h3,a {
 div.row{
   margin: 25px;
 }
+.searchresultsh2{
+  color: black;
+}
 /*====== Basics ======*/
 
 .nombresNuestros{
