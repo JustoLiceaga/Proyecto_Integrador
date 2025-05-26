@@ -21,9 +21,12 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			<% producto.forEach(function(product) { %>
-			<img src="<%= product.imagen %>" alt="foto de producto">
-			<h3 > <%= product.nombre %></h3>
-			<p> Cargado por: <%= product.usuario.email %></p>
+				<a href="/product/detalle/<%= product.id %>">
+					<img src="<%= product.imagen %>" alt="foto de producto">
+					<h3 > <%= product.nombre %></h3>
+					<p> Cargado por: <%= product.usuario.email %></p>
+				</a>
+
 			<% }) %> 
 				
 			
