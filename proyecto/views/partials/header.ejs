@@ -34,10 +34,10 @@
 
             <ul class="right-navbar">
                 <% if(locals.user){ %>
-                    <p>Bienvenido <%= locals.user.name %> </p>
-                    <li><a href="/users/logout">Logout</a></li>
-                    <li><a href="/users/profile/<%= locals.user.id %>">Profile</a></li>
-                    <li><a href="/product/product-add">Agregar producto</a></li>
+                    <p class="color">Bienvenido <%= locals.user.usuario %> </p>
+                    <li class="color"><a href="/users/logout">Logout</a></li>
+                    <li class="color"><a href="/users/profile/<%= locals.user.id %>">Profile</a></li>
+                    <li class="color"><a href="/product/product-add">Agregar producto</a></li>
 
 
                 <%  } else {%>

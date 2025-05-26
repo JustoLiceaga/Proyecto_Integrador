@@ -12,4 +12,7 @@ router.get('/login', userController.login);
 
 router.get('/profile/:id', userController.profile)
 
+router.get('/logout', userController.logout)
+
+
 module.exports = router;
