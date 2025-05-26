@@ -28,11 +28,30 @@ h1,h2,h3,a {
   font-style: normal;
   color: white;
 }
-div.row{
+div.row2{
   margin: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.cajaProductoSearch{
+  width: 350px;
+  margin: 30px;
+}
+.containerProductoSearch{
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ul.containerProductoSearch{
+  padding: 60px;
 }
 .searchresultsh2{
   color: black;
+}
+.imgSearch-results{
+  width: 300px;
 }
 /*====== Basics ======*/
 
