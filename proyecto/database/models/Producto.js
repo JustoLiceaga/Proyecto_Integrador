@@ -22,6 +22,10 @@ module.exports = function(sequelize, dataTypes){
         descripcion: {
             type: dataTypes.STRING(300)
         },
+        precio: {
+            type: dataTypes.INTEGER,
+            allowNull: false
+        },
         createdAt: {
             type: dataTypes.DATE,
             field: 'createdAt'
