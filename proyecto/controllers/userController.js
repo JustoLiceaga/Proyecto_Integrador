@@ -70,18 +70,21 @@ let userController = {
 			if (!resultado) {
             return res.send('El email no está registrado');
         	}
-            if(bcrypt.compareSync(password, resultado.password) == true){
+            if(bcrypt.compareSync(password, resultado.contrasenia) == true){
                 req.session.usuarioLogeado = resultado;
                 
                 if (recordame == 'on') {
                     res.cookie('usuario', resultado.email, {maxAge: 1000 * 60 * 10})
                 }
-                res.redirect('/')
+                return res.redirect('/')
             
             } else{
-                res.send('la contrasenia es incorrecta')
+                return res.send('la contrasenia es incorrecta')
             }
             })
+			.catch(function(error) {
+				return res.send(error);
+			});
 
 
     },
