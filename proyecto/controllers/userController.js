@@ -20,7 +20,8 @@ let userController = {
 	},
 
 	create: function(req, res) {
-		let usuarios = req.body.usuario;
+
+		let nombres = req.body.usuario;
 		let emails = req.body.email;
 		let pass = req.body.password;
 		let fecha = req.body.fecha;
