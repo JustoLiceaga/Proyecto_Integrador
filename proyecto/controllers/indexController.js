@@ -16,7 +16,7 @@ const indexController = {
             as: 'producto'
           }]
       })
-      .then(function(productos) {
+      .then(function(producto) {
         res.render('index', { usuario: usuario, producto: producto });
       })
       .catch(function(error) {
