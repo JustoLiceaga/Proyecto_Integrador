@@ -5,9 +5,21 @@ const usuario = db.Usuario;
 
 const productController ={
     detalle: function(req, res) {
-      
-        res.render('product', { usuario: data.usuario, producto: data.productos});
+        id = req.params.id;
+
+        producto.findOne({
+          where: { id: id },
+			  include: { 
+          model: usuario,
+          as: 'usuario'} })
+        .then(function (producto) {
+             return res.render("product", {producto: producto})
+            })
       },
+
+
+
+
       editar: function(req, res) {
         res.render('product-add', { usuario: data.usuario });
       },
