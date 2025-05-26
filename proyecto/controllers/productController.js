@@ -2,6 +2,7 @@ let db = require("../database/models");
 let bcrypt = require('bcryptjs');
 const producto = db.Producto
 const usuario = db.Usuario;
+const Op = require('sequelize');
 
 const productController = {
   detalle: function (req, res) {
@@ -25,9 +26,6 @@ const productController = {
       })
   },
 
-
-
-
   editar: function (req, res) {
     res.render('product-add', { usuario: data.usuario });
   },
@@ -36,7 +34,7 @@ const productController = {
     busqueda = req.query.search;
     producto.findAll({
       where: {
-        nombre: { [op.like]: '%' + busqueda + '%' }
+        nombre: { [Op.like]: '%' + busqueda + '%' }
       },
       include: [{
         model: usuario,
