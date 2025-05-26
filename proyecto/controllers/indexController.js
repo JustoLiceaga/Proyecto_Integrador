@@ -11,13 +11,10 @@ const indexController = {
             model: db.Usuario,
             as: 'usuario'
           },
-          {
-            model: db.Producto,
-            as: 'producto'
-          }]
+        ]
       })
       .then(function(productos) {
-        res.render('index', { usuario: usuario, producto: producto });
+        res.render('index', {producto: productos });
       })
       .catch(function(error) {
         res.send(error);
