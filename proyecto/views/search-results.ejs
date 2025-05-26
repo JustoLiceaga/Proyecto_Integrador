@@ -18,13 +18,13 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<div class="product-detail">
-				<div class="row">
+				<div class="row2">
 					<h1 class="searchresultsh2">Resultados de búsqueda:</h1>
     
-					<ul>
+					<ul class="containerProductoSearch">
 					  <% for (let i = 0; i < productos.length; i++) { %>
-						<li>
-							<img src="<%= productos[i].imagen %>" alt=""></img>
+						<li class="cajaProductoSearch">
+							<img src="<%= productos[i].imagen %>" alt="imagen de producto" class="imgSearch-results"></img>
 						  <h2 class="searchresultsh2"><a href="/producto/detalle/<%= productos[i].id %>">
 							<%= productos[i].nombre %>
 							</a></h2>
