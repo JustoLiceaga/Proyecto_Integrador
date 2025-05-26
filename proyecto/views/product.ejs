@@ -12,20 +12,20 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= producto[1].imagen %>" alt="" class="product-detail-img">
+					<img src="<%= producto.imagen %>" alt="" class="product-detail-img">
 					<p class="product-detail-description">
 						Buzo oversize premium de color marrón, ideal para un look relajado y moderno. Confeccionado con materiales de alta calidad que garantizan comodidad y estilo.</p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 
-					<% for( let i = 0; i < producto[1].comentarios.length; i++ ) { %>
+					<% for( let i = 0; i < producto.comentarios.length; i++ ) { %>
 						<article>
-							<img src=" <%= producto[1].comentarios[i].imagenPerfil %>" alt="">
+							<img src=" <%= producto.comentarios[i].imagenPerfil %>" alt="">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="/users/profile"><%= producto[1].comentarios[i].usuario %>: </a> </strong>
-								<%= producto[1].comentarios[i].texto %></p>
+								<strong> <a href="/users/profile"><%= producto.comentarios[i].usuario %>: </a> </strong>
+								<%= producto.comentarios[i].texto %></p>
 							</div>
 						</article>
 					<% } %>
