@@ -14,12 +14,12 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="<%= usuario.imagenPerfil %>" alt="foto de perfil" class="foto-perfil">
+				<img src="<%= resultado.foto_perfil %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= usuario.nombre %> 
-						<a href="/users/profile">
+					<h1 class="main-title"><%= resultado.usuario %> 
+						<a href="/users/profile/<%= resultado.id %>">
 							<i class="fas fa-cog"></i>
 						</a>
 					</h1>
@@ -27,8 +27,8 @@
 				</div>
 				<div>
 					<ul class="">
-						<li class="blanco"> Email: <%= usuario.email %></li>
-						<li class="blanco">8 productos</li>
+						<li class="blanco"> Email: <%= resultado.email %></li>
+						<li class="blanco">Productos: <%= resultado.productos.length %></li>
 						<li class="blanco">200 seguidores</li>
 						<li class="blanco">300 comentarios</li>
 					</ul>
@@ -45,17 +45,16 @@
 				<h2 class="products-title">Mis productos</h2>
 			</div>
 			<!-- Show mis productos -->
-			<% for( let i = 0; i < producto.length; i++ ) { %>
+			<% for( let i = 0; i < resultado.productos.length; i++ ) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/detalle/2">
+						<a href="/product/detalle/<%= resultado.productos[i].id %>">
 							<figure class="product-box_image">
-								<img src="<%= producto[i].imagen %>" alt="<%= producto[i].nombre %>">
+								<img src="<%= resultado.productos[i].imagen %>" alt="">
 							</figure>
 							<article class="product-box_data">
-								<h2 class="negro"><%= producto[i].nombre %></h2>
-								<p><%= producto[i].descripcion %></p>
-								<p>Comentarios: 4</p>
+								<h2 class="negro"><%= resultado.productos[i].nombre %></h2>
+								<p><%= resultado.productos[i].descripcion %></p>
 							</article>
 						</a>
 					</section>

@@ -36,7 +36,7 @@
                 <% if(locals.user){ %>
                     <p>Bienvenido <%= locals.user.name %> </p>
                     <li><a href="/users/logout">Logout</a></li>
-                    <li><a href="/users/profile">Profile</a></li>
+                    <li><a href="/users/profile/<%= locals.user.id %>">Profile</a></li>
                     <li><a href="/product/product-add">Agregar producto</a></li>
 
 

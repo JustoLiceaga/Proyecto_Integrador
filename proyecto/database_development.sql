@@ -20,10 +20,10 @@ CREATE TABLE usuarios (
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
-    imagen VARCHAR(255),
     nombre VARCHAR(100) NOT NULL,
     descripcion VARCHAR(300),
     precio INT NOT NULL,
+    imagen VARCHAR(255),
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -36,6 +36,7 @@ CREATE TABLE comentarios (
     id_producto INT NOT NULL,
     id_usuario INT NOT NULL,
     texto VARCHAR(355) NOT NULL,
+    foto_perfil VARCHAR(255),
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -44,8 +45,8 @@ CREATE TABLE comentarios (
 );
 
 
-INSERT INTO usuarios (usuario, email, contrasenia, fecha_nacimiento) VALUES
-('Juan', 'juan@gmail.com', '1234', '1990-01-01');
+INSERT INTO usuarios (usuario, email, contrasenia, fecha_nacimiento, foto_perfil) VALUES
+('Juan', 'juan@gmail.com', '1234', '1990-01-01', "/images/users/fotoPerfil.jpg");
 
 
 

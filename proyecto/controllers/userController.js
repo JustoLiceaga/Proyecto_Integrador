@@ -1,6 +1,7 @@
 let db = require("../database/models");
 let bcrypt = require('bcryptjs');
 const user = db.Usuario;
+const producto = db.Producto;
 
 let userController = {
 	register: function(req, res) {
@@ -16,7 +17,20 @@ let userController = {
         },
 
 	profile: function(req, res) {
-		res.render('profile', { usuario: data.usuario, producto: data.productos });
+		id = req.params.id;
+
+		user.findOne({
+			where: { id: id },
+			include: 
+        {
+          model: producto,
+          as: 'productos'
+        },
+		})
+		.then(function(resultado){
+			res.render('profile', {resultado: resultado});
+		})
+		
 	},
 
 	create: function(req, res) {

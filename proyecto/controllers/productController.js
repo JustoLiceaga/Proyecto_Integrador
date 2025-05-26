@@ -17,7 +17,12 @@ const productController = {
         },
         {
           model: db.Comentario,
-          as: 'comentarios'
+          as: 'comentarios',
+          include:
+            {
+              model: usuario,
+              as: 'usuario'
+            }
         }
       ]
     })
