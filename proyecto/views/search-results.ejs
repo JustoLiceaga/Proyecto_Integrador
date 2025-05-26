@@ -24,10 +24,11 @@
 					<ul>
 					  <% for (let i = 0; i < productos.length; i++) { %>
 						<li>
+							<img src="<%= productos[i].imagen %>" alt=""></img>
 						  <h2><a href="/producto/detalle/<%= productos[i].id %>">
 							<%= productos[i].nombre %>
 							</a></h2>
-							<p>Publicado por: <%= productos[i].usuario %></p>
+							<p>Publicado por: <a href="/users/profile/<%= productos[i].usuario.id %>"><%= productos[i].usuario.email %></a></p>
 						</li>
 				  <% } %>
 					  </ul>

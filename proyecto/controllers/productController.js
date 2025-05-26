@@ -2,7 +2,7 @@ let db = require("../database/models");
 let bcrypt = require('bcryptjs');
 const producto = db.Producto
 const usuario = db.Usuario;
-const Op = require('sequelize');
+const {Op }= require('sequelize');
 
 const productController = {
   detalle: function (req, res) {
@@ -29,6 +29,8 @@ const productController = {
   editar: function (req, res) {
     res.render('product-add', { usuario: data.usuario });
   },
+
+
   search: function (req, res) {
 
     busqueda = req.query.search;
@@ -39,7 +41,6 @@ const productController = {
       include: [{
         model: usuario,
         as: 'usuario',
-        attributes: ['usuario'] // Solo trae el nombre de usuario
       }]
     })
       .then(function (producto) {
