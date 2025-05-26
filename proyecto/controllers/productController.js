@@ -49,7 +49,7 @@ const productController = {
       }]
     })
       .then(function (producto) {
-        if (!producto) {
+        if (producto.length === 0) {
           return res.send('No hay resultados para su criterio de búsqueda');
         } else {
           return res.render("search-results", { productos: producto })
