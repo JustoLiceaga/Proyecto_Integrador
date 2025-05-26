@@ -28,7 +28,12 @@ h1,h2,h3,a {
   font-style: normal;
   color: white;
 }
-
+div.row{
+  margin: 25px;
+}
+.searchresultsh2{
+  color: black;
+}
 /*====== Basics ======*/
 
 .nombresNuestros{
@@ -206,6 +211,7 @@ hr {
 
 .charged{
   color: black;
+  
 }
 .products-wrapper {
   margin-top: 30px;
