@@ -23,6 +23,7 @@ CREATE TABLE productos (
     imagen VARCHAR(255),
     nombre VARCHAR(100) NOT NULL,
     descripcion VARCHAR(300),
+    precio INT NOT NULL,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -44,7 +45,7 @@ CREATE TABLE comentarios (
 
 
 INSERT INTO usuarios (usuario, email, contrasenia, fecha_nacimiento) VALUES
-('Juan', 'juan@gmail.com', '1234', '1990-01-01'),
+('Juan', 'juan@gmail.com', '1234', '1990-01-01');
 
 
 
