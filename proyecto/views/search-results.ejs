@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+
+<%- include("./partials/head") %>
+
+
+<body>
+	<!-- Header -->
+    <%- include("./partials/header") %>
+
+	<!-- /Header -->
+
+	<!-- Novedades -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Resultados de búsqueda</h2>
+			</div>
+			<div class="product-detail">
+				<div class="row2">
+					<h1 class="searchresultsh2">Resultados de búsqueda:</h1>
+    
+					<ul class="containerProductoSearch">
+					  <% for (let i = 0; i < productos.length; i++) { %>
+						<li class="cajaProductoSearch">
+							<img src="<%= productos[i].imagen %>" alt="imagen de producto" class="imgSearch-results"></img>
+						  <h2 class="searchresultsh2"><a href="/producto/detalle/<%= productos[i].id %>">
+							<%= productos[i].nombre %>
+							</a></h2>
+							<h2 class="searchresultsh2">Publicado por: <a href="/users/profile/<%= productos[i].usuario.id %>"><%= productos[i].usuario.email %></a></h2>
+						</li>
+				  <% } %>
+					  </ul>
+				</div>
+			</div>
+
+
+	<!-- footer -->
+    <%- include("./partials/footer") %>
+	<!-- /footer -->
+</body>
+
+</html>
