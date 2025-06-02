@@ -5,15 +5,18 @@ const producto = db.Producto;
 
 let userController = {
 	register: function(req, res) {
-		res.render('register');
+		if(req.session.usuarioLogeado != undefined){
+            return res.redirect('/')
+        }else{
+        return res.render("register", {error : null});
+        }
 	},
 
 	login: function(req, res){
         if(req.session.usuarioLogeado != undefined){
             return res.redirect('/')
         }else{
-        return res.render("login", {error : null}
-		);
+        return res.render("login", {error : null});
         }
         },
 
