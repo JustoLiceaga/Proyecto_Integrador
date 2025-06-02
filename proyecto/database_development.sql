@@ -46,7 +46,11 @@ CREATE TABLE comentarios (
 
 
 INSERT INTO usuarios (usuario, email, contrasenia, fecha_nacimiento, foto_perfil) VALUES
-('Juan', 'juan@gmail.com', '1234', '1990-01-01', "/images/users/fotoPerfil.jpg");
+('Juan', 'juan@gmail.com', '1234', '1990-01-01', "/images/users/fotoPerfil.jpg"), 
+('Martina', 'martina@gmail.com', '123434', '1990-01-01', "/images/users/chad.jpg"),
+('Sofia', 'sofia@gmail.com', '123454', '1990-01-01', "/images/users/chad2.jpg"),
+('Valentina', 'valentina@gmail.com', '122334', '1990-01-01', "/images/users/chad3.jpg"),
+('Lolo', 'lolo@gmail.com', '111234', '1990-01-01', "/images/users/chad4.jpg");
 
 
 
@@ -66,70 +70,75 @@ INSERT INTO productos (id_usuario, nombre, descripcion, precio, imagen) VALUES
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
-(1, 1, 'La camiseta es ideal para el día a día. Fresca y cómoda.'),
-(1, 1, 'Buena calidad por el precio. Me pedí otra en otro color.'),
-(1, 1, 'El algodón se siente suave, muy recomendable.'),
-(1, 1, 'Me encantó, aunque un poco justa de talle.');
+(1, 2, 'La camiseta es ideal para el día a día. Fresca y cómoda.'),
+(1, 3, 'Buena calidad por el precio. Me pedí otra en otro color.'),
+(1, 4, 'El algodón se siente suave, muy recomendable.'),
+(1, 5, 'Me encantó, aunque un poco justa de talle.');
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (2, 1, 'Muy cómodas y buena calidad.'),
-(2, 1, 'Me llegaron en dos días, excelente servicio.'),
-(2, 1, 'El buzo es enorme y abrigado, justo lo que buscaba.'),
-(2, 1, 'Me encantó el color, aunque el talle viene un poco grande.');
+(2, 3, 'Me llegaron en dos días, excelente servicio.'),
+(2, 4, 'El buzo es enorme y abrigado, justo lo que buscaba.'),
+(2, 5, 'Me encantó el color, aunque el talle viene un poco grande.');
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (3, 1, 'La chaqueta se ve de buena calidad y tiene estilo.'),
-(3, 1, 'Perfecta para salir de noche. Me encanta el diseño.'),
-(3, 1, 'Abriga bastante y se ve muy elegante.'),
-(3, 1, 'Pensé que sería más pesada, pero es muy cómoda.');
+(3, 3, 'Perfecta para salir de noche. Me encanta el diseño.'),
+(3, 4, 'Abriga bastante y se ve muy elegante.'),
+(3, 5, 'Pensé que sería más pesada, pero es muy cómoda.');
+
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (4, 1, 'Livianas y cómodas, las uso para correr.'),
-(4, 1, 'Quedan geniales con cualquier look.'),
-(4, 1, 'Buen agarre en la suela y cómodas para todo el día.'),
-(4, 1, 'Muy buena calidad, llegaron en perfecto estado.');
+(4, 2, 'Quedan geniales con cualquier look.'),
+(4, 4, 'Buen agarre en la suela y cómodas para todo el día.'),
+(4, 5, 'Muy buena calidad, llegaron en perfecto estado.');
+
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (5, 1, 'Súper abrigada y el diseño me encanta.'),
-(5, 1, 'El gorro es grande y cubre bien del frío.'),
-(5, 1, 'El cierre se siente resistente. Muy buena compra.'),
-(5, 1, 'Es más gruesa de lo que esperaba, ¡me encantó!');
+(5, 2, 'El gorro es grande y cubre bien del frío.'),
+(5, 4, 'El cierre se siente resistente. Muy buena compra.'),
+(5, 5, 'Es más gruesa de lo que esperaba, ¡me encantó!');
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (6, 1, 'Livianos, ideales para entrenar.'),
-(6, 1, 'Me encantó el color y el corte.'),
-(6, 1, 'Perfectos para los días calurosos.'),
-(6, 1, 'El ajuste en la cintura es cómodo.');
+(6, 2, 'Me encantó el color y el corte.'),
+(6, 3, 'Perfectos para los días calurosos.'),
+(6, 5, 'El ajuste en la cintura es cómodo.');
+
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (7, 1, 'La uso para la oficina, queda muy bien.'),
-(7, 1, 'Muy elegante y el color es hermoso.'),
-(7, 1, 'Buen material, no se arruga tanto.'),
-(7, 1, 'La tela es suave, me sorprendió para bien.');
+(7, 2, 'Muy elegante y el color es hermoso.'),
+(7, 3, 'Buen material, no se arruga tanto.'),
+(7, 5, 'La tela es suave, me sorprendió para bien.');
+
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (8, 1, 'Abriga muchísimo, ideal para el invierno.'),
-(8, 1, 'La textura es muy suave y se ve elegante.'),
-(8, 1, 'Un poco largo, pero muy cómodo.'),
-(8, 1, 'Lo usé en un viaje al sur y me salvó del frío.');
+(8, 2, 'La textura es muy suave y se ve elegante.'),
+(8, 3, 'Un poco largo, pero muy cómodo.'),
+(8, 4, 'Lo usé en un viaje al sur y me salvó del frío.');
+
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
 (9, 1, 'Buen diseño y visera curva, como me gusta.'),
-(9, 1, 'Me queda perfecta, ajustable y cómoda.'),
-(9, 1, 'Ideal para el sol. La uso todos los días.'),
-(9, 1, 'Buen material, no se deforma con el uso.');
+(9, 2, 'Me queda perfecta, ajustable y cómoda.'),
+(9, 3, 'Ideal para el sol. La uso todos los días.'),
+(9, 4, 'Buen material, no se deforma con el uso.');
 
 INSERT INTO comentarios (id_producto, id_usuario, texto)
 VALUES 
-(10, 1, 'Re suave y calentita. Excelente calidad.'),
-(10, 1, 'El diseño es precioso, combina con todo.'),
-(10, 1, 'Muy abrigada, ideal para el frío de la mañana.'),
-(10, 1, 'Me encantó, la uso con mi abrigo favorito.');
+(10, 2, 'Re suave y calentita. Excelente calidad.'),
+(10, 3, 'El diseño es precioso, combina con todo.'),
+(10, 4, 'Muy abrigada, ideal para el frío de la mañana.'),
+(10, 5, 'Me encantó, la uso con mi abrigo favorito.');
