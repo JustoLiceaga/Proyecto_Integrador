@@ -25,7 +25,7 @@
 					  <% for (let i = 0; i < productos.length; i++) { %>
 						<li class="cajaProductoSearch">
 							<img src="<%= productos[i].imagen %>" alt="imagen de producto" class="imgSearch-results"></img>
-						  <h2 class="searchresultsh2"><a href="/producto/detalle/<%= productos[i].id %>">
+						  <h2 class="searchresultsh2"><a href="/product/detalle/<%= productos[i].id %>">
 							<%= productos[i].nombre %>
 							</a></h2>
 							<h2 class="searchresultsh2">Publicado por: <a href="/users/profile/<%= productos[i].usuario.id %>"><%= productos[i].usuario.email %></a></h2>

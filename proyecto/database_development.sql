@@ -56,14 +56,14 @@ INSERT INTO usuarios (usuario, email, contrasenia, fecha_nacimiento, foto_perfil
 
 INSERT INTO productos (id_usuario, nombre, descripcion, precio, imagen) VALUES 
 (1, 'Camiseta Básica', 'Camiseta de algodón, cómoda y versátil.', 18999, '/images/products/prenda1.jpg'),
-(1, 'Buzo oversize', 'Buzo oversize premium.', 29999, '/images/products/prenda2.png'),
-(1, 'Chaqueta de cuero', 'Chaqueta de cuero sintético, perfecta para el invierno.', 14999, '/images/products/prenda3.jpg'),
-(1, 'Zapatillas deportivas', 'Zapatillas deportivas, ligeras y cómodas.', 11999, '/images/products/prenda4.jpeg'),
-(1, 'Campera con capucha', 'Campera con capucha, ideal para los días fríos.', 4999, '/images/products/prenda5.jpg'),
-(1, 'Pantalones cortos', 'Pantalones cortos, perfectos para el verano.', 3999, '/images/products/prenda6.jpg'),
-(1, 'Camisa manga larga', 'Camisa de manga larga, ideal para el trabajo o eventos.', 13999, '/images/products/prenda7.jpeg'),
-(1, 'Abrigo de lana', 'Abrigo cálido para el invierno.', 20999, '/images/products/prenda8.jpeg'),
-(1, 'Gorra', 'Gorra con ajuste trasero.', 8999, '/images/products/prenda9.jpeg'),
+(2, 'Buzo oversize', 'Buzo oversize premium.', 29999, '/images/products/prenda2.png'),
+(2, 'Chaqueta de cuero', 'Chaqueta de cuero sintético, perfecta para el invierno.', 14999, '/images/products/prenda3.jpg'),
+(3, 'Zapatillas deportivas', 'Zapatillas deportivas, ligeras y cómodas.', 11999, '/images/products/prenda4.jpeg'),
+(3, 'Campera con capucha', 'Campera con capucha, ideal para los días fríos.', 4999, '/images/products/prenda5.jpg'),
+(4, 'Pantalones cortos', 'Pantalones cortos, perfectos para el verano.', 3999, '/images/products/prenda6.jpg'),
+(4, 'Camisa manga larga', 'Camisa de manga larga, ideal para el trabajo o eventos.', 13999, '/images/products/prenda7.jpeg'),
+(5, 'Abrigo de lana', 'Abrigo cálido para el invierno.', 20999, '/images/products/prenda8.jpeg'),
+(5, 'Gorra', 'Gorra con ajuste trasero.', 8999, '/images/products/prenda9.jpeg'),
 (1, 'Bufanda', 'Bufanda suave y cálida para el frío.', 15999, '/images/products/prenda10.jpeg');
 
 

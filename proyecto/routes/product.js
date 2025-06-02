@@ -10,8 +10,8 @@ router.get('/search-results', productController.search)
 
 router.get('/product-add', productController.editar)
 
-router.get('/createProductadd', productController.createProductadd)
+router.post('/createProductadd', productController.createProductadd)
 
-router.get('/createComentario', productController.createComentario)
+router.post('/detalle/:id/createComentario', productController.createComentario)
 
 module.exports = router;

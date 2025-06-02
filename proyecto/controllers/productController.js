@@ -92,7 +92,7 @@ const productController = {
   createComentario: function(req, res) {
 
 
-      if (req.session.usuarioLogeado == undefined) {
+    if (req.session.usuarioLogeado == undefined) {
       return res.redirect('/users/login')
     } else {
      
@@ -100,23 +100,23 @@ const productController = {
 
       let idProducto = req.params.id;
       let idUsuario = req.session.usuarioLogeado.id;
-      let texto = req.body.Comentario;
+      let texto = req.body.comentario;
 
 
-        comentario.create({
-          id_producto : idProducto,
-          id_usuario: idUsuario,
-          texto : texto,
+      comentario.create({
+        id_producto : idProducto,
+        id_usuario: idUsuario,
+        texto : texto,
          
-        })
-        .then(function(comentario) {
-          res.redirect('/');
+      })
+      .then(function(comentario) {
+        res.redirect('/product/detalle/' + idProducto);
 
 
-        })
-        .catch(function(error) {
-          return res.send(error);
-        });}
+      })
+      .catch(function(error) {
+        return res.send(error);
+      });}
     }
 }
 
