@@ -57,7 +57,8 @@ let userController = {
 				usuario: nombres,
 				email: emails,
 				contrasenia: passEncriptada,
-				fecha_nacimiento: fecha
+				fecha_nacimiento: fecha,
+				foro_perfil: "/imagen/users/default-image.png"
 			})
 			.then(function(user) {
 				res.redirect('/users/login');
