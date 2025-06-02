@@ -39,6 +39,10 @@ let userController = {
 		let emails = req.body.email;
 		let pass = req.body.password;
 		let fecha = req.body.fecha;
+		let foto = req.body.foto;
+		if (foto === ''){
+			foto = 'default-image.png';
+		}
 		let passEncriptada = bcrypt.hashSync(pass, 10);
 
 		user.findOne({
@@ -58,7 +62,7 @@ let userController = {
 				email: emails,
 				contrasenia: passEncriptada,
 				fecha_nacimiento: fecha,
-				foro_perfil: "/imagen/users/default-image.png"
+				foto_perfil: "/imagen/users/" + foto
 			})
 			.then(function(user) {
 				res.redirect('/users/login');
@@ -104,10 +108,11 @@ let userController = {
 
     },
 
-    logout: function(req,res){
-        req.session.destroy(()=>{
-        res.clearCookie('usuario');
-        res.redirect('/')})
+	logout: function(req, res) {
+		req.session.destroy(function() {
+			res.clearCookie('usuario');
+			res.redirect('/');
+		});
 	}
 };
 
