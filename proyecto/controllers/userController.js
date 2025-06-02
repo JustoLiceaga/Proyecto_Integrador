@@ -16,6 +16,7 @@ let userController = {
         }
         },
 
+
 	profile: function(req, res) {
 		id = req.params.id;
 
@@ -50,12 +51,12 @@ let userController = {
 		})
 		.then(function(resultado) {
 			if (resultado) {
-				return res.send('ya existe el usuario');
-			}
+            	return res.render('register', { error: 'El email ya está registrado.' });
+        	}
 
 			if (pass.length < 3) {
-				return res.send('La contrasenia debe tener mas de 2 caracteres');
-			}
+            	return res.render('register', { error: 'La contraseña debe tener más de 2 caracteres.' });
+        	}
 
 			user.create({
 				usuario: nombres,
@@ -87,7 +88,7 @@ let userController = {
 		})
         .then(function(resultado){
 			if (!resultado) {
-            return res.send('El email no está registrado');
+            return res.render('login',{error: 'El email no está registrado'});
         	}
             if(bcrypt.compareSync(password, resultado.contrasenia) == true){
                 req.session.usuarioLogeado = resultado;
@@ -98,7 +99,7 @@ let userController = {
                 return res.redirect('/')
             
             } else{
-                return res.send('la contrasenia es incorrecta')
+                return res.render('login',{error: 'la contrasenia es incorrecta'})
             }
             })
 			.catch(function(error) {

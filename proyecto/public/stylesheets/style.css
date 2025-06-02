@@ -13,7 +13,10 @@
   --base-font-family: 'Roboto', sans-serif
 }
 
-
+.span_{
+  color: red;
+  font-weight: bold;
+}
 p{
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;

@@ -19,6 +19,10 @@
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12"> 
 				<form action="/users/processlogin" method="post">
+					<% if (error) { %>
+						<p class="span_"> <%= error %></p>
+					<% } %>
+
 					<label for="usuario">Email:</label>
 					<input type="email" name="email" required><br><br>
 				  
