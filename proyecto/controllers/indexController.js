@@ -19,7 +19,7 @@ const indexController = {
       .catch(function(error) {
         res.send(error);
       });
-      // esto estaba antes: (db vieja) res.render('index', { usuario: data.usuario, producto: data.productos});
+      
       }
 }
 
@@ -28,4 +28,3 @@ const indexController = {
 
 module.exports = indexController
 
-a

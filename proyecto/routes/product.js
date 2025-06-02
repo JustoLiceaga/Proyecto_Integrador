@@ -10,6 +10,8 @@ router.get('/search-results', productController.search)
 
 router.get('/product-add', productController.editar)
 
+router.get('/createProductadd', productController.createProductadd)
+
 
 
 module.exports = router;

@@ -1,7 +1,8 @@
 let db = require("../database/models");
 let bcrypt = require('bcryptjs');
 const producto = db.Producto
-const usuario = db.Usuario;
+const usuario = db.Usuario
+const comentario = db.Comentario
 const {Op }= require('sequelize');
 
 const productController = {
@@ -32,9 +33,12 @@ const productController = {
   },
 
   editar: function (req, res) {
-    res.render('product-add', { usuario: data.usuario });
+    if (req.session.usuarioLogeado == undefined) {
+      return res.redirect('/users/login')
+    } else {
+      return res.render("product-add");
+    }
   },
-
 
   search: function (req, res) {
 
@@ -58,7 +62,34 @@ const productController = {
       .catch(function (error) {
         return res.send(error);
       })
-  }
+  },
+  createProductadd: function(req, res) {
+
+
+      let imagen = "/images/products/" + req.body.urlImage;
+      let nombreProducto = req.body.productName;
+      let descripcion = req.body.descripcion;
+      let precio = req.body.precio;
+      let idUsuario = req.session.usuarioLogeado.id;
+
+
+        producto.create({
+          id_usuario: idUsuario,
+          nombre : nombreProducto,
+          descripcion: descripcion,
+          precio: precio,
+          imagen: imagen,
+        })
+        .then(function(producto) {
+          res.redirect('/');
+
+
+        })
+        .catch(function(error) {
+          return res.send(error);
+        });
+    },
+
 }
 
 
