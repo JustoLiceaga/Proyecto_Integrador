@@ -89,7 +89,35 @@ const productController = {
           return res.send(error);
         });
     },
+  createComentario: function(req, res) {
 
+
+      if (req.session.usuarioLogeado == undefined) {
+      return res.redirect('/users/login')
+    } else {
+     
+
+
+      let idProducto = req.params.id;
+      let idUsuario = req.session.usuarioLogeado.id;
+      let texto = req.body.Comentario;
+
+
+        comentario.create({
+          id_producto : idProducto,
+          id_usuario: idUsuario,
+          texto : texto,
+         
+        })
+        .then(function(comentario) {
+          res.redirect('/');
+
+
+        })
+        .catch(function(error) {
+          return res.send(error);
+        });}
+    }
 }
 
 

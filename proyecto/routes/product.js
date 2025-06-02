@@ -12,6 +12,6 @@ router.get('/product-add', productController.editar)
 
 router.get('/createProductadd', productController.createProductadd)
 
-
+router.get('/createComentario', productController.createComentario)
 
 module.exports = router;
